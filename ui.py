@@ -28,14 +28,19 @@ class Ui_MainWindow(object):
         self.TextInputMessage.setGeometry(QtCore.QRect(10, 9, 551, 71))
         self.TextInputMessage.setMaximumSize(QtCore.QSize(16777215, 120))
         font = QtGui.QFont()
+        font.setFamily("Arial")
         font.setPointSize(18)
         self.TextInputMessage.setFont(font)
         self.TextInputMessage.setMouseTracking(False)
-        self.TextInputMessage.setStyleSheet("background-color: #393e46;\n"
+        self.TextInputMessage.setStyleSheet("padding: 5px;\n"
+"background-color: #393e46;\n"
 "border-top-left-radius: 10px;\n"
 "border-bottom-left-radius: 10px;")
+        self.TextInputMessage.setInputMethodHints(QtCore.Qt.ImhMultiLine)
+        self.TextInputMessage.setLineWidth(1)
         self.TextInputMessage.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.TextInputMessage.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.TextInputMessage.setTabChangesFocus(True)
         self.TextInputMessage.setDocumentTitle("")
         self.TextInputMessage.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
         self.TextInputMessage.setObjectName("TextInputMessage")
@@ -50,6 +55,7 @@ class Ui_MainWindow(object):
         self.Messages = QtWidgets.QTextEdit(self.centralwidget)
         self.Messages.setGeometry(QtCore.QRect(10, 10, 660, 550))
         font = QtGui.QFont()
+        font.setFamily("Arial")
         font.setPointSize(24)
         self.Messages.setFont(font)
         self.Messages.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
@@ -66,7 +72,7 @@ class Ui_MainWindow(object):
         self.TextInputMessage.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.SF NS Text\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:13pt;\"><br /></p></body></html>"))
+"</style></head><body style=\" font-family:\'Arial\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'.SF NS Text\'; font-size:13pt;\"><br /></p></body></html>"))
         self.TextInputMessage.setPlaceholderText(_translate("MainWindow", "Введите сообщение"))
         self.BtnSendMessage.setText(_translate("MainWindow", "Отправить"))
